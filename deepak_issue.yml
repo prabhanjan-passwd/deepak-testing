@@ -13,7 +13,7 @@
 
    - name: Assign Role to Teams
      infra.aap_configuration.gateway_teams: 
-        name: team1
+        name: role1
         organization: test-org-prabhanjan
         aap_hostname: 192.168.122.151
         aap_username: "admin"
