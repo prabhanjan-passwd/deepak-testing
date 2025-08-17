@@ -11,11 +11,11 @@
         description: This is my testing org
         state: present
 
-  - name: Assign Role to Teams
-    infra.aap_configuration.gateway_teams: 
-      name: team1
-      organization: test-org-prabhanjan
-      aap_hostname: 192.168.122.151
-      aap_username: "admin"
-      aap_password: "redhat"
-      state: present
+   - name: Assign Role to Teams
+     infra.aap_configuration.gateway_teams: 
+        name: team1
+        organization: test-org-prabhanjan
+        aap_hostname: 192.168.122.151
+        aap_username: "admin"
+        aap_password: "redhat"
+        state: present
