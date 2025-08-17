@@ -10,4 +10,3 @@
         name: test-org-prabhanjan
         description: This is my testing org
         state: present
-    register: Org_name
