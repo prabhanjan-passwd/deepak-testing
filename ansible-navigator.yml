@@ -1,0 +1,14 @@
+---
+ansible-navigator:
+  ansible:
+    config:
+      path: ./ansible.cfg
+  execution-environment:
+    container-engine: podman
+    enabled: false
+    image: localhost/custom-supported-25:latest
+    pull:
+      policy: missing
+  playbook-artifact:
+    enable: false
+  
