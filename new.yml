@@ -6,7 +6,7 @@
     - name: Create ibm verify authentication map
       ansible.platform.authenticator_map:
         name: test1
-        aap_hostname: http://10.74.230.171	
+        aap_hostname: https://10.74.230.171
         aap_username: admin
         aap_password: redhat
         authenticator: "LDAPAuth"
