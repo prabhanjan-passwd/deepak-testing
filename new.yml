@@ -5,21 +5,20 @@
 
     - name: Create ibm verify authentication map
       ansible.platform.authenticator_map:
-        name: "{{ Team_Mapping }}"
-        aap_hostname: "{{ HOST }}"
-        aap_username: "{{ USERNAME }}"
-        aap_password: "{{ PASSWORD }}"
-        #aap_token: "{{ TOKEN }}"
-        authenticator: "{{ saml_value }}"
+        name: test1
+        aap_hostname: https://10.74.230.171	
+        aap_username: admin
+        aap_password: redhat
+        authenticator: "LDAPAuth"
         revoke: false
         map_type: team
         role: Team Admin
-        organization: "{{ Product }}"
-        team: "{{ team_name }}"
+        organization: org1
+        team: team1
         triggers:
           attributes:
             groups:
-              contains: "{{ team_name }}"
+              contains: team1
             join_condition: or
         state: present
 
