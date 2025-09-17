@@ -1,0 +1,25 @@
+- name: Onboard Product Team in AAP
+  hosts: localhost
+  gather_facts: false
+  tasks:
+
+    - name: Create ibm verify authentication map
+      ansible.platform.authenticator_map:
+        name: "{{ Team_Mapping }}"
+        aap_hostname: "{{ HOST }}"
+        aap_username: "{{ USERNAME }}"
+        aap_password: "{{ PASSWORD }}"
+        #aap_token: "{{ TOKEN }}"
+        authenticator: "{{ saml_value }}"
+        revoke: false
+        map_type: team
+        role: Team Admin
+        organization: "{{ Product }}"
+        team: "{{ team_name }}"
+        triggers:
+          attributes:
+            groups:
+              contains: "{{ team_name }}"
+            join_condition: or
+        state: present
+
