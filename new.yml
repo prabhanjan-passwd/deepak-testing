@@ -21,4 +21,5 @@
               contains: team1
             join_condition: or
         state: present
+        aap_validate_certs: false
 
