@@ -9,7 +9,7 @@
         aap_hostname: https://10.74.230.171
         aap_username: admin
         aap_password: redhat
-        authenticator: "LDAPAuth"
+        authenticator: ldap1
         revoke: false
         map_type: team
         role: Team Admin
